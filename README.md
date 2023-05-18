@@ -1,2 +1,2 @@
 # OddorEven
-A computer vision
+A computer vision game using opencv
