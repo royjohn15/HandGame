@@ -2,10 +2,36 @@
 <html>
 <head>
     <title>Hand Tracking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+        }
+        
+        #video-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        #video-stream {
+            border: 2px solid #333;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
 <body>
     <h1>Hand Tracking</h1>
-    <img id="video-stream" src="{{ url_for('video_feed') }}">
+    
+    <div id="video-container">
+        <img id="video-stream" src="{{ url_for('video_feed') }}">
+    </div>
     
     <script>
         // Auto-refresh the video stream every 3 seconds
